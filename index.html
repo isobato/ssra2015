@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SSSSRA2015App">
+<head>
+		<base href="/">
+	<meta name="fragment" content="!"/>
+	<meta name="keywords" content="{{keywords}}">
+	<meta name="description" content="{{description}}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="./img/logo.png">
+	<link rel="stylesheet" href="./css/base.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<title ng-bind-template="SSRA 2015 &mdash; {{title}}">SSRA 2015</title>
+</head>
+<body>
+
+	<!-- Sekcija sa menijem i obaveštenjima -->
+	<div layout="column" class="meni-i-obavestenja">
+
+		<header>
+
+			<!-- Info top contact -->
+			<section layout="row" layout-align="center center">
+				<h1 class="offscreen">Quick Contact</h1>
+				<div flex="90" flex-gt-sm="80" flex-gt-lg="70">
+					<ul class="meni-i-obavestenja__quickcontact">
+						<li><i class="material-icons" md-12>phone</i> +381 (64) 6620813</li>
+						<li><i class="material-icons" md-12>email</i> isobato@gmail.com</li>
+					</ul>
+				</div>
+			</section>
+			
+
+			<nav layout="row" layout-align="center center">
+				<div flex="100" flex-gt-sm="90" flex-gt-lg="80" >
+					<md-toolbar style="background-color:rgba(0,0,0,.5);">
+						<div class="md-toolbar-tools ">
+							<span><img class="logo" src="./img/logo.png" alt="Picture of our logo"></span>
+							<span flex></span>
+							
+							<md-menu-bar>
+							  <md-menu>
+							    <button ng-click="$mdOpenMenu()">
+							      <span class="material-icons">menu</span>
+							    </button>
+							    <md-menu-content>
+							      
+							      <md-menu-item>
+							        <md-button ng-click="ctrl.sampleAction('mnuPocetna', $event)">
+							          POČETNA
+							        </md-button>
+							      </md-menu-item>
+							      
+							      <md-menu-divider></md-menu-divider>
+
+							      <md-menu-item><md-menu-item>
+							        <md-menu>
+							          <md-button ng-click="$mdOpenMenu()">Galerija</md-button>
+							          <md-menu-content>
+							            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Foto</md-button></md-menu-item>
+							            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Video</md-button></md-menu-item>
+							          </md-menu-content>
+							        </md-menu>
+								    </md-menu-item></md-menu-item>
+
+								    <md-menu-item><md-menu-item>
+							        <md-menu>
+							          <md-button ng-click="$mdOpenMenu()">O nama</md-button>
+							          <md-menu-content>
+							            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Osnovni podaci</md-button></md-menu-item>
+							            <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Akti</md-button></md-menu-item>
+							          </md-menu-content>
+							        </md-menu>
+								    </md-menu-item></md-menu-item>
+										<md-menu-item><md-menu-item>
+							        <md-button ng-click="ctrl.sampleAction('mnuPocetna', $event)">
+							          Program polaganja
+							        </md-button>
+							      </md-menu-item></md-menu-item>
+										<md-menu-item><md-menu-item>
+							        <md-button ng-click="ctrl.sampleAction('mnuPocetna', $event)">
+							          Kalendar aktivnosti
+							        </md-button>
+							      </md-menu-item></md-menu-item>
+
+										<md-menu-item><md-menu-item>
+							        <md-button ng-click="ctrl.sampleAction('mnuPocetna', $event)">
+							          Kontakt
+							        </md-button>
+							      </md-menu-item></md-menu-item>
+
+										</md-menu-content>
+							  </md-menu>
+							</md-menu-bar>
+							<md-button ng-controller="AppCtrl" ng-click="toggleRight()">
+						    <span style="font-size: 3em; text-shadow: 4px 4px 3px blue, -4px -4px 3px red">13</span>
+						  </md-button>
+						</div>
+					</md-toolbar>
+				</div>
+			</nav>
+
+		</header>
+
+
+		<section class="announsments">
+			<header><h1 class="offscreen">Announsments</h1></header>
+
+			<div class="glavno-obavestenje" layout="row" layout-align="center center">
+				<div flex="50" flex-gt-sm="45" flex-gt-lg="40"></div>
+				<article class="glavno-obavestenje__artikal" flex="50" flex-gt-sm="45" flex-gt-lg="40">
+					<h1>Glavno Obaveštenje</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nostrum veniam qui eaque. Vitae accusantium, eius facere? Placeat itaque atque temporibus reiciendis facilis mollitia, doloribus, ipsa magnam, voluptatum repudiandae praesentium.</p>
+					
+					<md-button class="md-fab md-primary" aria-label="More info on topic">
+					    <span class="material-icons">add</span>
+					</md-button>
+				</article>
+			</div>
+
+			<div class="ostala-obavestenja" layout="row" layout-align="center center" layout-margin>
+				<article class="ostala-obavestenja__artikal" flex="25" flex-gt-sm="20" flex-gt-lg="20">
+					<h1>Artikal 1</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" flex="25" flex-gt-sm="20" flex-gt-lg="20">
+					<h1>Artikal 2</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" flex="25" flex-gt-sm="20" flex-gt-lg="20">
+					<h1>Artiakl 3</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" flex="25" flex-gt-sm="20" flex-gt-lg="20">
+					<h1>Artiakal 4</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+			</div>
+		</section>
+
+  
+		<md-content>
+
+			<div layout-margin>
+				<article class="ostala-obavestenja__artikal" >
+					<h1>Artikal 1</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" >
+					<h1>Artikal 2</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" >
+					<h1>Artiakl 3</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+				<article class="ostala-obavestenja__artikal" >
+					<h1>Artiakal 4</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, voluptatibus nemo id veritatis odit nam. Quia eos, at, illo architecto ducimus facere sapiente saepe eum, sit veritatis dolore! Eos.</p>
+					<md-button class="md-fab md-primary" aria-label="More info on topic"><i class="material-icons">icon</i></md-button>
+				</article>
+			</div>
+		</md-content>
+	
+	</div>
+
+	<div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
+	<section layout="row" flex>
+		<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+			<md-toolbar class="md-theme-light">
+				<h1 class="md-toolbar-tools">Sidenav Right</h1>
+			</md-toolbar>
+			<md-content ng-controller="RightCtrl" layout-padding>
+				<form>
+					<md-input-container>
+						<label for="testInput">Filter</label>
+						<input type="text" id="testInput"
+									 ng-model="filterClubs" md-autofocus>
+					</md-input-container>
+				</form>
+				<md-list>
+					<header>
+						<h1>List of clubs</h1>
+					</header>
+				  
+				  <md-list-item class="md-3-line" ng-repeat="club in clubs |filter : filterClubs">
+				    <img class="md-avatar" ng-src="./img/logo.png">
+				    <div class="md-list-item-text">
+				      <h3>{{club.club}}</h3>
+				    	<p>{{club.trainer}}</p>
+				    </div>
+				  </md-list-item>
+
+				</md-list>
+				<md-button ng-click="close()" class="md-primary">
+					Close Sidenav Right
+				</md-button>
+			</md-content>
+		</md-sidenav>
+		
+	</section>
+</div>
+
+	<script src="./js/myvendors.js"></script>
+	
+	<script type="./js/mytemplates.js"></script>
+
+	<script src="./js/myapp.js"></script>
+
+	<script>
+var app = angular.module('SSSSRA2015App');
+app.controller('MyController', function($scope, $mdSidenav) {
+  $scope.openLeftMenu = function() {
+    $mdSidenav('left').toggle();
+  };
+});
+app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.toggleLeft = buildDelayedToggler('left');
+    $scope.toggleRight = buildToggler('right');
+    $scope.isOpenRight = function(){
+      return $mdSidenav('right').isOpen();
+    };
+    /**
+     * Supplies a function that will continue to operate until the
+     * time is up.
+     */
+    function debounce(func, wait, context) {
+      var timer;
+      return function debounced() {
+        var context = $scope,
+            args = Array.prototype.slice.call(arguments);
+        $timeout.cancel(timer);
+        timer = $timeout(function() {
+          timer = undefined;
+          func.apply(context, args);
+        }, wait || 10);
+      };
+    }
+    /**
+     * Build handler to open/close a SideNav; when animation finishes
+     * report completion in console
+     */
+    function buildDelayedToggler(navID) {
+      return debounce(function() {
+        $mdSidenav(navID)
+          .toggle()
+          .then(function () {
+            $log.debug("toggle " + navID + " is done");
+          });
+      }, 200);
+    }
+    function buildToggler(navID) {
+      return function() {
+        $mdSidenav(navID)
+          .toggle()
+          .then(function () {
+            $log.debug("toggle " + navID + " is done");
+          });
+      }
+    }
+  })
+  .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.close = function () {
+      $mdSidenav('left').close()
+        .then(function () {
+          $log.debug("close LEFT is done");
+        });
+    };
+  })
+  .controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.close = function () {
+      $mdSidenav('right').close()
+        .then(function () {
+          $log.debug("close RIGHT is done");
+        });
+    };
+
+    $scope.clubs = [
+    	{
+				'club': 'SU “CENTAR REALNOG AIKIDOA VOKIĆ” BEOGRAD',
+				'trainer': 'Vladimir Vokić 7.DAN'
+			},
+			{
+				'club': 'SU “PAVIĆEVIĆ” BEOGRAD',
+				'trainer': 'Mirko Pavićević 3.DAN'
+			},
+			{
+				'club': 'KRA “ZMAJEVI” BEOGRAD',
+				'trainer': 'Boban Jovanović 5.DAN'
+			},
+			{
+				'club': 'KRA “ANĐEO” ČAČAK',
+				'trainer': 'Goran Jovašević 2.DAN'
+			},
+			{
+				'club': 'SPORTSKO UDRUŽENJE REALNOG AIKIDOA FUTOG',
+				'trainer': 'Marko Divjak  4.DAN  065/589-11-33'
+			},
+			{
+				'club': 'KBS “GOZO ŠIODA” KANJIŽA',
+				'trainer': 'Halás Mihály 5.DAN'
+			},
+			{
+				'club': 'KLUB REALNOG AIKIDOA “AMADEUS”  NIŠ',
+				'trainer': 'Zoran Milivojević 3.DAN'
+			},
+			{
+				'club': 'KBS “SPARTAKUS” NOVI KNEŽEVAC',
+				'trainer': 'Halás Mihály 5.DAN'
+			},
+			{
+				'club': 'KRA “RAČIĆ” KRAGUJEVAC',
+				'trainer': 'Goran Račić 3.DAN'
+			},
+			{
+				'club': 'SU “CENTAR REALNOG AIKIDOA BREŠĆANSKI” NOVI SAD',
+				'trainer': 'Branko Brešćanski 6.DAN'
+			},
+			{
+				'club': 'KLUB REALNOG AIKIDOA I JU-JUTSU “NOVI SAD” NOVI SAD',
+				'trainer': 'Dragan Jagodić 5.DAN'
+			},
+			{
+				'club': 'SU " KLUB REALNOG AIKIDOA SURČIN" SURČIN',
+				'trainer': 'Tamara Mandić 3.DAN'
+			},
+			{
+				'club': 'KRA “ZRENJANIN 1995” ZRENJANIN',
+				'trainer': 'Aleksandar Nikolić 5.DAN'
+			}
+
+    ];
+  });
+	</script>
+	
+</body>
+</html>
