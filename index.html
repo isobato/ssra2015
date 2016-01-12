@@ -7,8 +7,8 @@
 	<meta name="description" content="{{description}}">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="shortcut icon" type="image/png" href="./img/logo.png">
-	<link rel="stylesheet" href="./css/base.css">
+	<link rel="shortcut icon" type="image/png" href="img/logo.png">
+	<link rel="stylesheet" href="css/base.css">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
@@ -37,7 +37,7 @@
 				<div flex="100" flex-gt-sm="90" flex-gt-lg="80" >
 					<md-toolbar style="background-color:rgba(0,0,0,.5);">
 						<div class="md-toolbar-tools ">
-							<span><img class="logo" src="./img/logo.png" alt="Picture of our logo"></span>
+							<span><img class="logo" src="img/logo.png" alt="Picture of our logo"></span>
 							<span flex></span>
 							
 							<md-menu-bar>
@@ -193,7 +193,7 @@
 					</header>
 				  
 				  <md-list-item class="md-3-line" ng-repeat="club in clubs |filter : filterClubs">
-				    <img class="md-avatar" ng-src="./img/logo.png">
+				    <img class="md-avatar" ng-src="/img/logo.png">
 				    <div class="md-list-item-text">
 				      <h3>{{club.club}}</h3>
 				    	<p>{{club.trainer}}</p>
@@ -210,11 +210,11 @@
 	</section>
 </div>
 
-	<script src="./js/myvendors.js"></script>
+	<script src="js/myvendors.js"></script>
 	
-	<script type="./js/mytemplates.js"></script>
+	<script type="js/mytemplates.js"></script>
 
-	<script src="./js/myapp.js"></script>
+	<script src="js/myapp.js"></script>
 
 	<script>
 var app = angular.module('SSSSRA2015App');
